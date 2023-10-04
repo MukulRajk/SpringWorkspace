@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id="resd" class="in.mindcraft.SpringApp1.Address">
+		<property name="city" value="Mumbai"></property>        <!--Setter injection -->
+		<property name="state" value="MH"></property>
+		
+	</bean>
+	
+  <bean id="stud" class="in.mindcraft.SpringApp1.Student" autowire="autodetect">  <!--autowire (detects automatically by name) -->
+	    <property name="rollno" value="11"></property>        <!--Setter injection -->
+		<property name="name" value="Rajesh"></property>
+	<!--<property name="resd" ref="add" ></property> -->	   <!-- add ref -->
+  </bean >
+  
+  <bean id="lap" class="in.mindcraft.SpringApp1.Laptop" >
+	  <property name="lid" value="1010"></property>
+	  <property name="make" value="Acer"></property>
+	  <property name="cost" value="67880"></property>
+  </bean>
+  
+  
+  
+</beans>
